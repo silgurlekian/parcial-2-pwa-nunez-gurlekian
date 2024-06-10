@@ -8,4 +8,4 @@ const getList = async () => {
     console.log(list)
 }
 
-getList();
+getList(); 
