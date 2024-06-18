@@ -3,7 +3,6 @@ const LISTA = [
     'index.html',
     'js/script.js',
     'css/materialize.min.css',
-    // Otros archivos estáticos que necesitas en tu aplicación
 ];
 
 self.addEventListener('install', (e) => {
