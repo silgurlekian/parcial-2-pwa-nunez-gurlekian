@@ -1,9 +1,9 @@
 {
     "name": "MoviesApp",
-    "short_name": "MoviesApp",
+    "short_name": "moviesApp",
     "theme_color": "#fff",
     "background_color": "#fff",
-    "display": "minimal-ui",
+    "display": "browser",
     "orientation": "portrait",
     "scope": "/",
     "start_url": "/",
