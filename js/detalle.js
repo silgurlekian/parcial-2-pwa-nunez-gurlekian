@@ -46,10 +46,7 @@ const mostrarDetalle = () => {
     awards.innerText = 'Premios' + ' : ' + movie.Awards;
     div.appendChild(awards);
 
-    const img = document.createElement('img');
-        img.src = movie.Images
-        img.alt = movie.Title;
-        div.appendChild(img);
+    
 
     // const img = document.createElement('img');
     // img.classList.add ('col-12', 'col-sm-6');
