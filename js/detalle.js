@@ -49,13 +49,21 @@ const mostrarDetalle = () => {
         img.alt = movie.Title;
         div.appendChild(img);
 
-    // movie.Images.forEach(image => {
-    //     const img = document.createElement('img');
-    //     img.src = image
+    // const img = document.createElement('img');
+    // img.classList.add ('col-12', 'col-sm-6');
+    //     img.src = movie.Images
     //     img.alt = movie.Title;
     //     div.appendChild(img);
-    // });
-   
+
+    
+
+    movie.Images.forEach(image => {
+        const img = document.createElement('img');
+        img.classList.add ('col-12', 'col-sm-6');
+        img.src = image
+        img.alt = movie.Title;
+        div.appendChild(img);
+    });
     
 
  };
