@@ -34,10 +34,10 @@ const showList = (list) => {
             <div class="col s12 m6 l4">
                 <div class="card">
                     <div class="card-image">
-                        <img src="${movie.Images}" alt="Images de ${movie.Title}">
+                        <img src="${movie.Images[1]}" alt="Images de ${movie.Title}">
                     </div>
                     <div class="card-content">
-                        <span class="card-title">${movie.Title}</span>
+                        <h2 class="card-title">${movie.Title}</h2>
                         <p>Año: ${movie.Year}</p>
                         <p>Género: ${movie.Genre}</p>
                         <p>Rating: ${movie.Rated}</p>
