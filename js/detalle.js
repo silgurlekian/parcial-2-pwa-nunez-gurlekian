@@ -12,35 +12,35 @@ const mostrarDetalle = () => {
     titulo.innerText = movie.Title;
     div.appendChild(titulo);
 
-    const lanzamiento = document.createElement('h3');
+    const lanzamiento = document.createElement('h5');
     lanzamiento.innerText = 'Lanzamiento' + ' : ' + movie.Released;
     div.appendChild(lanzamiento);
 
-    const duracion = document.createElement('h3');
+    const duracion = document.createElement('h5');
     duracion.innerText = 'Duración' + ' : ' + movie.Runtime; 
     div.appendChild(duracion);
    
-    const genero = document.createElement('h3');
+    const genero = document.createElement('h5');
     genero.innerText = 'Género' + ' : ' + movie.Genre;
     div.appendChild(genero);
 
-    const director = document.createElement('h3');
+    const director = document.createElement('h5');
     director.innerText = 'Director' + ' : ' + movie.Director;
     div.appendChild(director);
 
-    const actores = document.createElement('h3');
+    const actores = document.createElement('h5');
     actores.innerText = 'Actores' + ' : ' + movie.Actors;
     div.appendChild(actores);
 
-    const resumen = document.createElement('h3');
+    const resumen = document.createElement('h5');
     resumen.innerText = 'Resumen' + ' : ' + movie.Plot;
     div.appendChild(resumen);
 
-    const rating = document.createElement('h3');
+    const rating = document.createElement('h5');
     rating.innerText = 'IMDB Rating' + ' : ' + movie.imdbRating;
     div.appendChild(rating);
 
-    const awards = document.createElement('h3');
+    const awards = document.createElement('h5');
     awards.innerText = 'Premios' + ' : ' + movie.Awards;
     div.appendChild(awards);
 
