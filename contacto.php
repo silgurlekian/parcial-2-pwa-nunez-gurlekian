@@ -13,16 +13,36 @@ if ($datos = $_POST) {
 }
 ?>
 
-<section id="contacto">
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoviesApp</title>
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+<nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo center">MoviesApp</a>
+      <a class="waves-effect pink darken-2 btn" id="loginButton">Login</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/">Home</a></li>
+        <li><a href="contacto.php">Contacto</a></li>
+      </ul>
+      <a class="waves-effect pink darken-2 btn" id="installButton">Instalar</a>
+    </div>
+  </nav>
+
     <div class="container">
         <div class="row">
             <div class="col-12">
                 <h2>Contacto</h2>
             </div>
 
-            <div class="col-xs-12 col-sm-3">
-                <img src="images/vino-01.jpg" alt="Vino contacto" class="img-pc">
-            </div>
             <div class="col-xs-12 col-sm-9">
                 <div id="formulario">
                     <?php if (!$datosRecibidos) : ?>
@@ -68,4 +88,9 @@ if ($datos = $_POST) {
             </div>
         </div>
     </div>
-</section>
+    </section>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/script.js" type="module"></script>
+</body>
+
+</html>
