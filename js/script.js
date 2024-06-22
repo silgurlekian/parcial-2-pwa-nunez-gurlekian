@@ -4,6 +4,7 @@ const showList = (list) => {
     const container = document.getElementById('moviesContainer');
     container.innerHTML = '';
     list.forEach(movie => {
+        localStorage[movie.imdbID] = JSON.stringify(movie);
         container.innerHTML += `
             <div class="col s12 m6 l4">
                 <div class="card">
@@ -17,7 +18,7 @@ const showList = (list) => {
                         <p>Rating: ${movie.Rated}</p>
                     </div>
                     <div class="card-action">
-                        <a href="/details/?id=${movie.id}">Detalles</a>
+                        <a href="detalle/?id=${movie.id}">Detalles</a>
                     </div>
                 </div>
             </div>
