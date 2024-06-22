@@ -37,8 +37,8 @@ const showList = (list) => {
                         <p>Rating: ${movie.Rated}</p>
                     </div>
                     <div class="card-action">
-                        <a href="/detalle.html?title=${movie.Title}">Detalles</a>
-                    </div>
+                    <a href="detalle.html?imdbID=${movie.imdbID}">Detalles</a>
+                </div>
                 </div>
             </div>
         `;
