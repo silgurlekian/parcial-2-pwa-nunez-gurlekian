@@ -1,5 +1,4 @@
-const URL =
-  "https://gist.githubusercontent.com/saniyusuf/406b843afdfb9c6a86e25753fe2761f4/raw/523c324c7fcc36efab8224f9ebb7556c09b69a14/Film.JSON";
+const URL = "https://gist.githubusercontent.com/saniyusuf/406b843afdfb9c6a86e25753fe2761f4/raw/523c324c7fcc36efab8224f9ebb7556c09b69a14/Film.JSON";
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import {
@@ -158,3 +157,38 @@ setTimeout(() => {
     ocultarBotonInstalacion();
   }
 }, 200);
+
+// Manejo del envío del formulario de contacto
+document.getElementById("contactForm").addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+  const formData = new FormData(event.target);
+  const data = Object.fromEntries(formData.entries());
+
+  try {
+    const response = await fetch(event.target.action, {
+      method: "POST",
+      headers: {
+        'X-Requested-With': 'XMLHttpRequest',
+      },
+      body: new URLSearchParams(data),
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+      document.getElementById("formulario").style.display = "none";
+      document.getElementById("datos").style.display = "block";
+      document.getElementById("nombre").innerText = result.nombre;
+      document.getElementById("email").innerText = result.email;
+      document.getElementById("telefono").innerText = result.telefono;
+      document.getElementById("comentarioText").innerText = result.comentario;
+      M.toast({ html: "¡Formulario enviado con éxito!" });
+    } else {
+      M.toast({ html: "Error al enviar el formulario" });
+    }
+  } catch (error) {
+    console.error("Error al enviar el formulario:", error);
+    M.toast({ html: "Error al enviar el formulario" });
+  }
+});
